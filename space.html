@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>index</title>
+    <style>
+    /* 폰트 설정 */
+        @font-face {
+            font-family: 'BeOkay';
+            src: url('BeOkay-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'DancingQueen';
+            src: url('DancingQueen.woff2') format('woff2');
+        }
+        /* 전체 스타일 예시 */
+        
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-image: url('background.jpg'); /* 헤더에도 배경 이미지 추가 */
+            background-size: cover; /* 화면에 맞게 이미지 크기 조정 */
+            background-position: center; /* 중앙 정렬 */
+            background-attachment: fixed; /* 스크롤 시 배경 이미지 고정 */
+        }
+        
+
+        .logo {
+            height: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center; /* 수직 정렬 */
+            margin: 0 40px; /* 양쪽 마진 설정 */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-left: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        /* Noto Sans 폰트 적용 */
+        nav .menu a,
+        footer .footer-right div {
+            font-family: 'Noto Sans', sans-serif; /* Noto Sans 폰트 적용 */
+            font-weight: 400; /* 기본 굵기 */
+            font-size: 14px; /* 폰트 크기 설정 */
+            color: #fff; /* 글자색 (필요에 따라 변경) */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+        /* 네비게이션 메뉴 간격 조절 */
+        nav .menu a {
+            margin-left: 40px; /* 메뉴 아이템 간 여백 */
+        }
+        nav .menu a:hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+        /* ---------------------------본문--------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* 배경 이미지 */
+            background-size: cover; /* 화면에 맞게 이미지 크기 조정 */
+            background-position: center; /* 이미지 중앙 정렬 */
+            background-attachment: fixed; /* 스크롤 시 배경 이미지 고정 */
+            color: #fff;
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 10%; /* 좌우 여백 설정 */
+        }
+        h1, h2 {
+            font-family: 'Noto Sans KR', sans-serif; /* 기본 타이틀 폰트 */
+            font-size: 3.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* 특정 단어 강조 */
+        .highlight {
+            font-family: 'DancingQueen', cursive; /* DancingQueen 폰트 적용 */
+            color: #fff; /* 화이트 색상 */
+            text-decoration: underline; /* 밑줄 */
+            text-underline-offset: 15px; /* 밑줄과 글자 사이 여백 */
+            text-decoration-thickness: 2px;
+        }
+
+        /* 본문 스타일 */
+        .text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px; /* 너비 제한 */
+        }
+
+        /* 메인 섹션 (첫 화면) */
+        .main {
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* 좌우 레이아웃 스타일 */
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .row img {
+            max-width: 45%; /* 이미지 너비 설정 */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* 텍스트 왼쪽 */
+        .left-text {
+            text-align: left;
+            max-width: 500px;
+            margin-right: 5%; /* 이미지와의 여백 */
+        }
+
+        /* 텍스트 오른쪽 */
+        .right-text {
+            text-align: left;
+            max-width: 500px;
+            margin-left: 5%;
+        }
+        /* ---------------푸터 스타일--------------- */
+        footer {
+            margin: 40px 0 20px 0; /* 위아래 마진 설정 */
+            padding: 10px 40px; /* 좌우 여백 적용 */
+            font-family: 'BeOkay', sans-serif; /* 폰트 적용 */
+            color: #fff; /* 텍스트 색상 */
+            font-size: 14px;
+        }
+
+        .footer-line {
+            border-top: 1px solid #ffffff; /* 상단에 1px 선 */
+            margin: 0 auto 10px auto; /* 양쪽 여백 유지 */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column; /* 텍스트를 세로로 정렬 */
+        }
+
+        /* 푸터 텍스트 스타일 */
+        footer .footer-right div {
+            margin-top: 5px; /* 위아래 여백 설정 */
+        }
+
+        .footer-left {
+            align-items: flex-start; /* 왼쪽 정렬 */
+        }
+
+        .footer-right {
+            align-items: flex-end; /* 오른쪽 정렬 */
+            text-align: right;
+        }
+
+        .footer-logo {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .footer-left span {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .footer-subtext {
+            margin-top: 5px;
+            color: #aaa; /* 좀 더 흐린 색상 */
+            font-size: 12px;
+        }
+
+</style>
+</head>
+<body>
+    <!--------------------------------------- 네비게이션바 ---------------------------------------->
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="로고 이미지" class="logo">
+        </a>
+        <nav>
+            <div class="menu">
+                <a href="first.html">FIRST</a>
+                <a href="favorite.html">FAVORITE</a>
+                <a href="space.html">SPACE</a>
+                <a href="highlight.html">HIGHLIGHT</a>
+                <a href="bookstore.html">BOOKSTORE</a>
+            </div>            
+        </nav>
+    </header>
+    <!--------------------------------------- 본문 ---------------------------------------->
+    <section class="main">
+        <h1>
+            책, 주로 <span class="highlight">어디서</span> 읽나요?
+        </h1>
+        <p class="text">
+            예전에는 새벽에 침대에 엎드려 머리맡에 있는 작은 조명을 켜고 읽는 걸 좋아했습니다. 
+            그런데 이제는 그 자세로 오래는 못 있겠습니다. 허리가 아프거든요. 대신 다른 곳에서 읽기 시작했습니다!
+        </p>
+    </section>
+
+    <!-- 지하철 섹션 -->
+    <section class="row">
+        <div class="left-text">
+            <h2>
+                <span class="highlight">지하철</span> 에서
+            </h2>
+            <p class="text">
+                하루에 3 - 4시간이 넘는 등하교 시간, 왠지 이 시간에는 해야 할 일이고 과제고 뭐고 생각하고 싶지 않습니다. 잠깐 숨 돌릴 시간이 되어줍니다.
+            </p>
+        </div>
+        <img src="subway.jpeg" alt="지하철 이미지">
+    </section>
+
+    <!-- 카페 섹션 -->
+    <section class="row">
+        <img src="cafe.jpeg" alt="카페 이미지">
+        <div class="right-text">
+            <h2>
+                <span class="highlight">카페</span> 에서
+            </h2>
+            <p class="text">
+                좋아하는 카페에서 책을 읽는 시간은 정말 소중합니다. 바쁠 때 카페에 가면 종일 작업만 하는데, 여유가 있을 때는 되도록이면 주말마다 꼭 책 읽으러 가려고 노력합니다.
+            </p>
+        </div>
+        <br><br><br><br>
+    </section>
+    <!----------------------------------- 푸터 영역 ---------------------------------------------->
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="small-logo.png" alt="로고 이미지" class="footer-logo">
+                <span>© 2024</span>
+            </div>
+            <div class="footer-right">
+                <div>INSTAGRAM</div>
+                <div>E-MAIL</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>

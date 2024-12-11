@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>index</title>
+    <style>
+    /* 폰트 설정 */
+        @font-face {
+            font-family: 'BeOkay';
+            src: url('BeOkay-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'DancingQueen';
+            src: url('DancingQueen.woff2') format('woff2');
+        }
+        /* 전체 스타일 예시 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #fff;
+        }
+
+        h2 {
+            position: fixed;
+            top: 300px;
+            left: 0;
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin: 50px 0 0 100px;
+        }
+        @media screen and (max-width: 768px) {
+            h2 {
+                font-size: 0.8rem; /* 글자 크기 축소 */
+                text-align: left; /* 왼쪽 정렬 */
+                margin: 20px 0 0 100px; /* 마진 조정 */
+            }
+        }
+        /* 본문 텍스트 스타일 */
+        p {
+            font-size: 2.5rem; /* 텍스트 크기를 크게 설정 */
+            line-height: 1.8; /* 줄 간격 조절 */
+            font-weight: 400; /* 가독성 좋게 기본 두께 설정 */
+            color: #959595; /* 기본 색상 */
+            margin: 100px 0 0 600px; /* 상하 여백 */
+            max-width: 700px; /* 최대 너비를 제한해 양쪽 마진 확보 */
+            padding: 0 10%;
+        }
+        .highlight-text {
+            font-family: 'DancingQueen', cursive;
+            color: #54ffc9; /* 포인트 색상 */
+            font-size: 2.4rem;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'BeOkay', sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            height: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center; /* 수직 정렬 */
+            margin: 0 40px; /* 양쪽 마진 설정 */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-left: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        /* Noto Sans 폰트 적용 */
+        nav .menu a,
+        footer .footer-right div {
+            font-family: 'Noto Sans', sans-serif; /* Noto Sans 폰트 적용 */
+            font-weight: 400; /* 기본 굵기 */
+            font-size: 14px; /* 폰트 크기 설정 */
+            color: #fff; /* 글자색 (필요에 따라 변경) */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+        /* 네비게이션 메뉴 간격 조절 */
+        nav .menu a {
+            margin-left: 40px; /* 메뉴 아이템 간 여백 */
+        }
+
+        nav .menu a:hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+
+        /* ----------------푸터 스타일---------------- */
+        footer {
+            margin: 40px 0 20px 0; /* 위아래 마진 설정 */
+            padding: 10px 40px; /* 좌우 여백 적용 */
+            font-family: 'BeOkay', sans-serif; /* 폰트 적용 */
+            color: #fff; /* 텍스트 색상 */
+            font-size: 14px;
+        }
+
+        .footer-line {
+            border-top: 1px solid #ffffff; /* 상단에 1px 선 */
+            margin: 0 auto 10px auto; /* 양쪽 여백 유지 */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center;
+        }
+
+        footer .footer-right div {
+            margin-top: 5px; /* 위아래 여백 설정 */
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column; /* 텍스트를 세로로 정렬 */
+        }
+
+        .footer-left {
+            align-items: flex-start; /* 왼쪽 정렬 */
+        }
+
+        .footer-right {
+            align-items: flex-end; /* 오른쪽 정렬 */
+            text-align: right;
+        }
+
+        .footer-logo {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .footer-left span {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .footer-subtext {
+            margin-top: 5px;
+            color: #aaa; /* 좀 더 흐린 색상 */
+            font-size: 12px;
+        }
+
+</style>
+</head>
+<body>
+    <!-- 네비게이션바 -->
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="로고 이미지" class="logo">
+        </a>
+        <nav>
+            <div class="menu">
+                <a href="first.html">FIRST</a>
+                <a href="favorite.html">FAVORITE</a>
+                <a href="space.html">SPACE</a>
+                <a href="highlight.html">HIGHLIGHT</a>
+                <a href="bookstore.html">BOOKSTORE</a>
+            </div>            
+        </nav>
+    </header>
+
+    <main class="first-main">
+        <div class="content">
+            <h2>When did I start reading?</h2>
+            <p>
+                제가 언제부터 <span class="highlight-text">책</span> 을 읽기 시작했는지에 관한 이야기를 하겠습니다. 저는 중학교 
+                2학년 때 우연히 집 근처 도서관에서 무라카미 하루키의 <span class="highlight-text">상실의 시대</span> 라는 책을 빌리게 되었는데, 
+                천천히 읽어 내려 가며 머릿속으로 무언가 번뜩이는 느낌과 함께 완전히 <span class="highlight-text">매료 </span>되고 말았습니다. 사실 이제 와서 그 책을 살펴보면
+                무라카미 하루키 특유의 기승전 성적인 표현 방식과 지나친 낭만화가 눈에 보이지만, 중학교 2학년. 한창 감수성이 예민할 시기였던 저는 모든 인물들에게 완전히 빠져들어
+                몰입할 수 있었습니다. 영화로도 제작된 걸 아시나요? 저는 작중 <span class="highlight-text">미도리</span> 라는 인물을 배우 미즈하라 키코가 연기한 점이 가장 마음에 들었습니다. 제가 책을 읽으면서
+                상상하던 미도리의 캐릭터가 미즈하라 키코와 거의 일치했거든요. 영화 전반적으로 보여지는 <span class="highlight-text">초록빛</span> 의 색감과, 잔잔한 이야기 흐름이 소설의 분위기를 잘 표현해낸 것 같습니다.
+                하지만 '나오코'의 캐스팅은 살짝 미스가 아니었나 생각이 듭니다.
+            </p>
+        </div>
+    </main>
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="small-logo.png" alt="로고 이미지" class="footer-logo">
+                <span>© 2024</span>
+            </div>
+            <div class="footer-right">
+                <div>INSTAGRAM</div>
+                <div>E-MAIL</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>

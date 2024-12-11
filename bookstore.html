@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>index</title>
+    <style>
+    /* 폰트 설정 */
+        @font-face {
+            font-family: 'BeOkay';
+            src: url('BeOkay-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'DancingQueen';
+            src: url('DancingQueen.woff2') format('woff2');
+        }
+        /* 전체 스타일 예시 */
+        
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+
+        .logo {
+            height: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center; /* 수직 정렬 */
+            margin: 0 40px; /* 양쪽 마진 설정 */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-left: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        /* Noto Sans 폰트 적용 */
+        nav .menu a,
+        footer .footer-right div {
+            font-family: 'Noto Sans', sans-serif; /* Noto Sans 폰트 적용 */
+            font-weight: 400; /* 기본 굵기 */
+            font-size: 14px; /* 폰트 크기 설정 */
+            color: #fff; /* 글자색 (필요에 따라 변경) */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+        /* 네비게이션 메뉴 간격 조절 */
+        nav .menu a {
+            margin-left: 40px; /* 메뉴 아이템 간 여백 */
+        }
+        nav .menu a:hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+        /* ---------------------------본문--------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* 배경색 검정 */
+            color: #fff; /* 글자색 흰색 */
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+        }
+
+        .bookstore-section {
+            padding: 40px;
+        }
+
+        .bookstore-card {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #d4d4d4;
+            margin-bottom: 40px;
+            padding: 20px;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        .bookstore-image {
+            flex: 1 1 40%;
+            max-width: 300px;
+            height: 200px;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .bookstore-content {
+            flex: 2 1 50%;
+        }
+
+        .bookstore-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .bookstore-address {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+
+        .bookstore-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .bookstore-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .bookstore-card a :hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+        .bookstore-card a .bookstore-image, .bookstore-card a .bookstore-content {
+            display: block;
+        }
+
+        /* ---------------푸터 스타일--------------- */
+        footer {
+            margin: 40px 0 20px 0; /* 위아래 마진 설정 */
+            padding: 10px 40px; /* 좌우 여백 적용 */
+            font-family: 'BeOkay', sans-serif; /* 폰트 적용 */
+            color: #fff; /* 텍스트 색상 */
+            font-size: 14px;
+        }
+
+        .footer-line {
+            border-top: 1px solid #ffffff; /* 상단에 1px 선 */
+            margin: 0 auto 10px auto; /* 양쪽 여백 유지 */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column; /* 텍스트를 세로로 정렬 */
+        }
+
+        /* 푸터 텍스트 스타일 */
+        footer .footer-right div {
+            margin-top: 5px; /* 위아래 여백 설정 */
+        }
+
+        .footer-left {
+            align-items: flex-start; /* 왼쪽 정렬 */
+        }
+
+        .footer-right {
+            align-items: flex-end; /* 오른쪽 정렬 */
+            text-align: right;
+        }
+
+        .footer-logo {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .footer-left span {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .footer-subtext {
+            margin-top: 5px;
+            color: #aaa; /* 좀 더 흐린 색상 */
+            font-size: 12px;
+        }
+
+</style>
+</head>
+<body>
+    <!--------------------------------------- 네비게이션바 ---------------------------------------->
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="로고 이미지" class="logo">
+        </a>
+        <nav>
+            <div class="menu">
+                <a href="first.html">FIRST</a>
+                <a href="favorite.html">FAVORITE</a>
+                <a href="space.html">SPACE</a>
+                <a href="highlight.html">HIGHLIGHT</a>
+                <a href="bookstore.html">BOOKSTORE</a>
+            </div>            
+        </nav>
+    </header>
+    <!--------------------------------------- 본문 ---------------------------------------->
+    <main>
+        <section class="bookstore-section">
+            <section class="bookstore-section">
+                <!-- 첫 번째 서점 -->
+                <a href="bookstore-01.html"><div class="bookstore-card">
+                    <div class="bookstore-content">
+                        <div class="bookstore-title">GHOST BOOKS</div>
+                        <div class="bookstore-address">대구 중구 경상감영길 212 3층</div>
+                    </div>
+                </a>
+                </div>
+            </section>
+            <!-- 두 번째 서점 -->
+            <section class="bookstore-section">
+                <!-- 첫 번째 서점 -->
+                <a href="bookstore-02.html"><div class="bookstore-card">
+                    <div class="bookstore-content">
+                        <div class="bookstore-title">심플책방</div>
+                        <div class="bookstore-address">대구 동구 동부로34길 4 지하 1층</div>
+                    </div>
+                </a>
+                </div>
+            </section>
+            <!-- 나머지 서점 추가 (복사 후 수정) -->
+            <section class="bookstore-section">
+                <!-- 세 번째 서점 -->
+                <a href="bookstore-03.html"><div class="bookstore-card">
+                    <div class="bookstore-content">
+                        <div class="bookstore-title">다다르다</div>
+                        <div class="bookstore-address">대전 중구 중교로73번길 6 1층, 2층</div>
+                    </div>
+                </a>
+                </div>
+            </section>
+        </section>
+    </main>
+    <!----------------------------------- 푸터 영역 ---------------------------------------------->
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="small-logo.png" alt="로고 이미지" class="footer-logo">
+                <span>© 2024</span>
+            </div>
+            <div class="footer-right">
+                <div>INSTAGRAM</div>
+                <div>E-MAIL</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>

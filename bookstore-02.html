@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>index</title>
+    <style>
+    /* 폰트 설정 */
+        @font-face {
+            font-family: 'BeOkay';
+            src: url('BeOkay-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'DancingQueen';
+            src: url('DancingQueen.woff2') format('woff2');
+        }
+        /* 전체 스타일 예시 */
+        
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+
+        .logo {
+            height: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center; /* 수직 정렬 */
+            margin: 0 40px; /* 양쪽 마진 설정 */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-left: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        /* Noto Sans 폰트 적용 */
+        nav .menu a,
+        footer .footer-right div {
+            font-family: 'Noto Sans', sans-serif; /* Noto Sans 폰트 적용 */
+            font-weight: 400; /* 기본 굵기 */
+            font-size: 14px; /* 폰트 크기 설정 */
+            color: #fff; /* 글자색 (필요에 따라 변경) */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+        /* 네비게이션 메뉴 간격 조절 */
+        nav .menu a {
+            margin-left: 40px; /* 메뉴 아이템 간 여백 */
+        }
+        nav .menu a:hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+        /* ---------------------------본문--------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* 배경색 검정 */
+            color: #fff; /* 글자색 흰색 */
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+        }
+
+        .bookstore-section {
+            padding: 40px;
+        }
+
+        .bookstore-card {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #d4d4d4;
+            margin-bottom: 40px;
+            padding: 20px;
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        .bookstore-image {
+            flex: 1 1 40%;
+            max-width: 300px;
+            height: 200px;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .bookstore-content {
+            flex: 2 1 50%;
+        }
+
+        .bookstore-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .bookstore-address {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+
+        .bookstore-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .bookstore-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .bookstore-card a :hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+        .bookstore-card a .bookstore-image, .bookstore-card a .bookstore-content {
+            display: block;
+        }
+        .image-gallery {
+            position: relative;
+            width: 50%;
+            margin-left: 100px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            position: absolute;
+            top: 50%;
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            cursor: pointer;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        label.prev {
+            left: 10px;
+        }
+
+        label.next {
+            right: 10px;
+        }
+
+        input#slide1:checked ~ .slides {
+            transform: translateX(0%);
+        }
+
+        input#slide2:checked ~ .slides {
+            transform: translateX(-100%);
+        }
+        .content-section {
+            display: flex; /* Flex 레이아웃 적용 */
+            align-items: center; /* 수직 정렬 */
+            justify-content: space-between; /* 좌우 여백 설정 */
+            gap: 250px; /* 이미지와 텍스트 사이 간격 */
+            padding: 40px; /* 전체 섹션 패딩 */
+        }
+
+        .text-content {
+            flex: 1 1 50%; /* 텍스트 영역 비율 */
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            margin-right: 100px;
+
+            margin-left: 100px;
+        }
+
+        .text-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            max-width: 800px;
+        }
+        .text-and-images {
+            display: flex; /* 전체 섹션을 가로로 나란히 정렬 */
+            align-items: center; /* 위쪽 정렬 */
+            gap: 30px; /* 텍스트와 이미지 간 간격 */
+            padding: 40px; /* 전체 여백 */
+        }
+
+        .text-and-images .text-content {
+            flex: 1; /* 텍스트 영역 비율 */
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #fff;
+        }
+
+        .text-and-images .text-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .text-and-images .text-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 400px; /* 텍스트 너비 제한 */
+        }
+
+        .text-and-images .image-row {
+            display: flex; /* 이미지들을 가로로 정렬 */
+            gap: 15px; /* 이미지 간 간격 */
+            margin-right: 100px;
+        }
+
+        .text-and-images .image-row .row-image {
+            width: 280px; /* 각 이미지의 너비 */
+            height: auto; /* 이미지 높이 자동 조정 */
+            object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+        }
+
+        /* ---------------푸터 스타일--------------- */
+        footer {
+            margin: 40px 0 20px 0; /* 위아래 마진 설정 */
+            padding: 10px 40px; /* 좌우 여백 적용 */
+            font-family: 'BeOkay', sans-serif; /* 폰트 적용 */
+            color: #fff; /* 텍스트 색상 */
+            font-size: 14px;
+        }
+
+        .footer-line {
+            border-top: 1px solid #ffffff; /* 상단에 1px 선 */
+            margin: 0 auto 10px auto; /* 양쪽 여백 유지 */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column; /* 텍스트를 세로로 정렬 */
+        }
+
+        /* 푸터 텍스트 스타일 */
+        footer .footer-right div {
+            margin-top: 5px; /* 위아래 여백 설정 */
+        }
+
+        .footer-left {
+            align-items: flex-start; /* 왼쪽 정렬 */
+        }
+
+        .footer-right {
+            align-items: flex-end; /* 오른쪽 정렬 */
+            text-align: right;
+        }
+
+        .footer-logo {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .footer-left span {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .footer-subtext {
+            margin-top: 5px;
+            color: #aaa; /* 좀 더 흐린 색상 */
+            font-size: 12px;
+        }
+
+</style>
+</head>
+<body>
+    <!--------------------------------------- 네비게이션바 ---------------------------------------->
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="로고 이미지" class="logo">
+        </a>
+        <nav>
+            <div class="menu">
+                <a href="first.html">FIRST</a>
+                <a href="favorite.html">FAVORITE</a>
+                <a href="space.html">SPACE</a>
+                <a href="highlight.html">HIGHLIGHT</a>
+                <a href="bookstore.html">BOOKSTORE</a>
+            </div>            
+        </nav>
+    </header>
+    <!--------------------------------------- 본문 ---------------------------------------->
+    <main>
+        <section class="bookstore-section">
+            <!-- 첫 번째 서점 -->
+            <a href="bookstore.html"><div class="bookstore-card">
+                <div class="bookstore-content">
+                    <div class="bookstore-title">심플책방</div>
+                    <div class="bookstore-address">대구 동구 동부로34길 4 지하 1층</div>
+                </div>
+            </a>
+            </div>
+        </section>
+        <section class="content-section">
+            <!-- 이미지 갤러리 -->
+            <div class="image-gallery">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+
+                <div class="slides">
+                    <div class="slide">
+                        <img src="simple_1.jpeg" alt="Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="simple_5.jpeg" alt="Image 2">
+                    </div>
+                </div>
+        
+                <label for="slide1" class="prev">&#10094;</label>
+                <label for="slide2" class="next">&#10095;</label>
+            </div>
+            
+            <!-- 텍스트 콘텐츠 -->
+            <div class="text-content">
+                <h2>아지트</h2>
+                <p>
+                    대구에는 없는 게 없습니다. <br>
+                    제대로 된 간판 없이 지하에 위치해 있어 처음 갔을 땐 입구를 못 찾고 여러번 지나쳐 버렸습니다.
+                    어찌저찌 통로를 따라 들어가 보면 감각있는 인테리어와 수많은 컬렉션들에 압도되는 기분이었습니다.
+                    사장님과 아내 분이 항상 친절하게 대해주셔서 대구에 가면 잊지 않고 꼭 들르는 곳 중 하나입니다.
+                </p>
+            </div>
+        </section>
+        <section class="text-and-images">
+            <div class="text-content">
+                
+                <p>
+                    심플책방의 묘미, 또 가는 이유 중 하나! <br>레몬이와 라임이 입니다. 🍋
+                </p>
+            </div>
+            <div class="image-row">
+                <img src="simple_2.jpeg" alt="Photo 1" class="row-image">
+                <img src="simple_3.jpeg" alt="Photo 2" class="row-image">
+                <img src="simple_4.jpeg" alt="Photo 3" class="row-image">
+            </div>
+        </section>
+    </main>
+    <!----------------------------------- 푸터 영역 ---------------------------------------------->
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="small-logo.png" alt="로고 이미지" class="footer-logo">
+                <span>© 2024</span>
+            </div>
+            <div class="footer-right">
+                <div>INSTAGRAM</div>
+                <div>E-MAIL</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

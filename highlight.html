@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>index</title>
+    <style>
+    /* 폰트 설정 */
+        @font-face {
+            font-family: 'BeOkay';
+            src: url('BeOkay-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'DancingQueen';
+            src: url('DancingQueen.woff2') format('woff2');
+        }
+        /* 전체 스타일 예시 */
+        
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        
+
+        .logo {
+            height: 30px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center; /* 수직 정렬 */
+            margin: 0 40px; /* 양쪽 마진 설정 */
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-left: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        /* Noto Sans 폰트 적용 */
+        nav .menu a,
+        footer .footer-right div {
+            font-family: 'Noto Sans', sans-serif; /* Noto Sans 폰트 적용 */
+            font-weight: 400; /* 기본 굵기 */
+            font-size: 14px; /* 폰트 크기 설정 */
+            color: #fff; /* 글자색 (필요에 따라 변경) */
+            text-decoration: none; /* 밑줄 제거 */
+        }
+
+        /* 네비게이션 메뉴 간격 조절 */
+        nav .menu a {
+            margin-left: 40px; /* 메뉴 아이템 간 여백 */
+        }
+        nav .menu a:hover {
+            color: #54ffc9;
+            transition: color 0.3s ease;
+        }
+        /* ---------------------------본문--------------------------- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* 배경색 검정 */
+            color: #fff; /* 글자색 흰색 */
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .highlight-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 50px 10%;
+            margin-top: 300px;
+            min-height: 100vh;
+        }
+
+        .highlight-section.left {
+            flex-direction: row;
+        }
+
+        .highlight-section.right {
+            flex-direction: row-reverse;
+        }
+
+        .highlight-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .book-image {
+            width: 200px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .book-image img {
+            height: auto;
+            filter: blur(10px) grayscale(0%); /* 흐림(블러)과 채도 감소 적용 */
+            transition: filter 0.5s ease-in-out; /* 부드러운 전환 효과 */
+        }
+
+        .book-image img:hover {
+            filter: blur(0) grayscale(0); /* 블러와 채도 효과 제거 */
+        }
+
+        .book-text {
+            text-align: left;
+            font-size: 24px;
+            line-height: 1.6;
+            margin: 0;
+            z-index: 12;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Light shadow */
+        }
+        .book-text .quote {
+                margin: 0 0 20px 0; /* 하단 여백만 추가 */
+            }
+
+        .book-author {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        /* ---------------푸터 스타일--------------- */
+        footer {
+            margin: 40px 0 20px 0; /* 위아래 마진 설정 */
+            padding: 10px 40px; /* 좌우 여백 적용 */
+            font-family: 'BeOkay', sans-serif; /* 폰트 적용 */
+            color: #fff; /* 텍스트 색상 */
+            font-size: 14px;
+        }
+
+        .footer-line {
+            border-top: 1px solid #ffffff; /* 상단에 1px 선 */
+            margin: 0 auto 10px auto; /* 양쪽 여백 유지 */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* 좌우 정렬 */
+            align-items: center;
+        }
+
+        .footer-left,
+        .footer-right {
+            display: flex;
+            flex-direction: column; /* 텍스트를 세로로 정렬 */
+        }
+
+        /* 푸터 텍스트 스타일 */
+        footer .footer-right div {
+            margin-top: 5px; /* 위아래 여백 설정 */
+        }
+
+        .footer-left {
+            align-items: flex-start; /* 왼쪽 정렬 */
+        }
+
+        .footer-right {
+            align-items: flex-end; /* 오른쪽 정렬 */
+            text-align: right;
+        }
+
+        .footer-logo {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .footer-left span {
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .footer-subtext {
+            margin-top: 5px;
+            color: #aaa; /* 좀 더 흐린 색상 */
+            font-size: 12px;
+        }
+
+</style>
+</head>
+<body>
+    <!--------------------------------------- 네비게이션바 ---------------------------------------->
+    <header>
+        <a href="index.html">
+            <img src="logo.png" alt="로고 이미지" class="logo">
+        </a>
+        <nav>
+            <div class="menu">
+                <a href="first.html">FIRST</a>
+                <a href="favorite.html">FAVORITE</a>
+                <a href="space.html">SPACE</a>
+                <a href="highlight.html">HIGHLIGHT</a>
+                <a href="bookstore.html">BOOKSTORE</a>
+            </div>            
+        </nav>
+    </header>
+    <!--------------------------------------- 본문 ---------------------------------------->
+    <main>
+        <section class="highlight-section left">
+            <div class="highlight-card">
+                <div class="book-image"><img src="허수경.jpg" alt=""></div>
+                <div class="book-text">
+                    <p>레몬이 태양 아래 푸른 잎 사이에서 익어가던 여름은 아주 짧았다 <br>
+                    나는 당신의 연인이 아니다. 생각하면 무참할 때였다. 짧았다,
+                    는 <br>내 진술은 순간의 의심에 불과했다 길어서 우리는 충분히 울었다</p>
+                    <div class="book-author">
+                        - 허수경, 레몬
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="highlight-section right">
+            <div class="highlight-card">
+                <div class="book-image"><img src="해변의 카프카.jpeg" alt=""></div>
+                <div class="book-text">
+                    <p>요컨대 어떤 종류의 불완전함을 지닌 작품은 불완전하다는 그 이유 <br>
+                        때문에, 인간의 마음을 강하게 끌어당긴다.</p>
+                    <div class="book-author">
+                        - 무라카미 하루키, 해변의 카프카
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="highlight-section left">
+            <div class="highlight-card">
+                <div class="book-image"><img src="작별인사.jpeg" alt=""></div>
+                <div class="book-text">
+                    <p>그저 익숙한 것이 더 나아 보였을 수도 있다. 그리움이라는 감정이<br>
+                    꼭 좋았던 무언가를 향한 것만은 아닐 거라고 생각한다.<br>
+                    그저 익숙한 무언가를 되찾고 싶은 마음일 수도 있다.</p>
+                    <div class="book-author">
+                        - 김영하, 작별인사
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!----------------------------------- 푸터 영역 ---------------------------------------------->
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="small-logo.png" alt="로고 이미지" class="footer-logo">
+                <span>© 2024</span>
+            </div>
+            <div class="footer-right">
+                <div>INSTAGRAM</div>
+                <div>E-MAIL</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>
